@@ -13,7 +13,7 @@ env:
   HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
 
 jobs:
-  backend-deployment:
+  frontend-deployment:
     runs-on: ubuntu-latest # Setup an environment to run the action
     steps:
       - uses: actions/checkout@v2 # This actions copy the repository on the environment

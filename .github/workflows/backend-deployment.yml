@@ -24,4 +24,4 @@ jobs:
           heroku_app_name: 'find-project-member-api' #The name of your heroku app - Must be unique in Heroku
           region: 'eu'
           appdir: 'backend'
-          docker_heroku_process_type: 'worker'
+          docker_heroku_process_type: 'web'
