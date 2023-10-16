@@ -2,7 +2,7 @@ version: '3.3'
 services:
   backend_app:
     build:
-      context: ./
+      context: ./backend
       dockerfile: ./backend/Dockerfile.dev
     ports:
       - '8000:8000'
@@ -26,8 +26,8 @@ services:
 
   frontend_app_dev:
     build:
-      context: ./
-      dockerfile: ./frontend/Dockerfile.dev
+      context: ./frontend
+      dockerfile: ./frontend/Dockerfile
     volumes:
       - /app/node_modules
       - .:/app
@@ -37,6 +37,7 @@ services:
       - backend_app
     networks:
       - backend
+
 networks:
   backend:
     driver: bridge

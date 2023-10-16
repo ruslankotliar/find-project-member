@@ -1,14 +1,15 @@
 FROM node:alpine
 
-WORKDIR /frontend
-COPY ./frontend/package.json ./package.json
-COPY ./frontend/yarn.lock ./yarn.lock
+WORKDIR /app
+COPY ./package.json ./package.json
+COPY ./yarn.lock ./yarn.lock
 RUN yarn
 
-COPY ./frontend ./
+COPY . ./
 EXPOSE 3000
 
 CMD ["yarn", "start"]
+
 
 
 # USING NGINX
