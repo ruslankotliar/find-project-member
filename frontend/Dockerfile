@@ -11,7 +11,6 @@ EXPOSE 3000
 CMD ["yarn", "start"]
 
 
-
 # USING NGINX
 
 # FROM node:alpine as build
