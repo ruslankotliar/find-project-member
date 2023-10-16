@@ -22,6 +22,8 @@ jobs:
           heroku_api_key: $HEROKU_API_KEY #The Heroku api key we stored on our repo secret
           heroku_email: $HEROKU_EMAIL #Your heroku yuser name
           heroku_app_name: 'find-project-member-api' #The name of your heroku app - Must be unique in Heroku
+          healthcheck: https://find-project-member-api.herokuapp.com/health
           region: 'eu'
           appdir: 'backend'
+          usedocker: true
           docker_heroku_process_type: 'web'
