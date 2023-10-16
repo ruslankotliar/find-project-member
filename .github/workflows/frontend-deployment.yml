@@ -25,3 +25,4 @@ jobs:
           healthcheck: 'https://find-project-member.herokuapp.com/health'
           region: 'eu'
           appdir: 'frontend'
+          docker_heroku_process_type: 'web'
