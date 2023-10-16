@@ -17,11 +17,6 @@ jobs:
     runs-on: ubuntu-latest # Setup an environment to run the action
     steps:
       - uses: actions/checkout@v2 # This actions copy the repository on the environment
-      - name: Rename the heroku_backend.yml
-        run: |
-          ls -a
-          mv heroku_backend.yml heroku.yml
-          ls -a
       - uses: akhileshns/heroku-deploy@v3.12.12 # This action deploys the content on Heroku
         with:
           heroku_api_key: $HEROKU_API_KEY #The Heroku api key we stored on our repo secret
@@ -29,3 +24,4 @@ jobs:
           heroku_app_name: 'find-project-member-api' #The name of your heroku app - Must be unique in Heroku
           healthcheck: 'https://find-project-member-api.herokuapp.com/health'
           region: 'eu'
+          appdir: 'backend'
